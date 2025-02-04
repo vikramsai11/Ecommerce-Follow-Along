@@ -1,8 +1,25 @@
 # React + Vite
+# ECommerce Application
+## Milestone 1:
+### Overview
+This is a full-featured eCommerce application that allows users to browse products, add items to their cart, and complete purchases securely. The application includes user authentication, product management, order tracking, and a secure payment gateway.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- User authentication (Sign up, Login, Logout, Profile management)
+- Product listing and search functionality
+- Shopping cart and checkout process
+- Payment gateway integration
+- Order tracking and history
+- Admin dashboard for product and order management
+- Responsive UI for a seamless experience across devices
 
-Currently, two official plugins are available:
+## Milestone 2:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies Used
+- **Frontend:** React.js / Angular / Vue.js
+- **Backend:** Node.js / Express / Django / Ruby on Rails
+- **Database:** MongoDB / PostgreSQL / MySQL
+- **Authentication:** JWT / OAuth
+- **Payment Gateway:** Stripe / PayPal / Razorpay
+- **Hosting:** AWS / Heroku / Firebase
+
