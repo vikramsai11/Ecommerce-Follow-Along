@@ -10,15 +10,15 @@ const MONGO_URI = "mongodb://127.0.0.1:27017/mydatabase"; // Using 127.0.0.1 for
 // Connect to MongoDB
 mongoose
   .connect(MONGO_URI)
-  .then(() => console.log("✅ MongoDB Connected Successfully"))
+  .then(() => console.log("MongoDB Connected Successfully"))
   .catch((err) => {
-    console.error("❌ MongoDB Connection Error:", err);
+    console.error("MongoDB Connection Error:", err);
     process.exit(1); // Exit the process if connection fails
   });
 
 // Basic Route
 app.get("/", (req, res) => {
-  res.send("Hello Rama, MongoDB is connected!");
+  res.send("Hello Vikram, MongoDB is connected!");
 });
 
 // Start Server
