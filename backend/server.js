@@ -1,35 +1,49 @@
+const express = require("express");
+const cors = require("cors");
 const app = require("./app");
+const connectDatabase = require("./db/database");
+const userRoutes = require("./controller/userRouter");
+const fs = require("fs");
+const path = require("path");
 
-// Handling uncaught Exception
+// Ensure uploads directory exists
+const uploadPath = path.join(__dirname, "uploads");
+if (!fs.existsSync(uploadPath)) {
+    fs.mkdirSync(uploadPath, { recursive: true });
+    console.log(" Created 'uploads/' directory");
+}
+
+// Handling uncaught Exception (e.g., using an undefined variable)
 process.on("uncaughtException", (err) => {
-    console.log(`Error: ${err.message}`);
-    console.log("Shutting down the server due to an uncaught exception");
+    console.error(`Error: ${err.message}`);
+    console.log("Shutting down due to an uncaught exception...");
+    process.exit(1); // Exit process with failure
 });
 
-// Load environment variables
+// Load environment variables (only in development mode)
 if (process.env.NODE_ENV !== "PRODUCTION") {
     require("dotenv").config({ path: "config/.env" });
 }
 
-// Set a default port if process.env.PORT is undefined
+//  Connect to MongoDB database
+connectDatabase();
+const allowedOrigins = ["http://localhost:5173", "http://localhost:3000"];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
+app.use("/user", userRoutes);
+
+//  Start server
 const PORT = process.env.PORT || 8000;
-
-// Default route to prevent "Cannot GET /" error
-app.get("/", (req, res) => {
-    res.send("Server is running...");
-});
-
-// Create server
 const server = app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
-
-// Handle unhandled promise rejections
-process.on("unhandledRejection", (err) => {
-    console.log(`Error: ${err.message}`);
-    console.log("Shutting down the server due to an unhandled promise rejection");
-
-    server.close(() => {
-        process.exit(1);
-    });
+    console.log(` Server running on http://localhost:${PORT}`);
 });
