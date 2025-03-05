@@ -170,3 +170,29 @@ In this milestone, we focused on sending and receiving product data between the 
 - Creating an API Endpoint to send product data
 - Receive data on the frontend
 - Dynamically display product data
+
+# Milestone 12: My Products Page
+
+## Overview
+In this milestone, we created a "My Products" page that displays all the products added by the user, filtered by their email.
+
+## Features
+- **Backend**: Added an endpoint to fetch products by user email.
+- **Frontend**: Created a function to retrieve and display products dynamically.
+- **Component**: Utilized the `Card` component to present each product.
+
+Got it! Here’s a simplified version of the README file without code:
+
+---
+
+# Milestone 13: Edit Product Functionality
+
+## Learning Goals
+- Write an endpoint to update existing data in MongoDB.
+- Autofill forms with previous data for editing.
+
+# Milestone 14: Delete Product Functionality
+
+## Learning Goals
+- Write an endpoint to update existing data in MongoDB.
+- Deletes the product from the page
