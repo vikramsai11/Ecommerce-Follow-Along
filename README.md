@@ -1,6 +1,7 @@
-# E-Commerce Application (MERN Stack)
+# Ecommerce-Follow-Along
+# Project Overview: E-Commerce Application (MERN Stack )
 
-This project guides you through building a full-stack E-Commerce website using the MERN stack (MongoDB, Express, React, Node.js). The application allows users to browse products, add them to their cart, and proceed to checkout. Admin users can manage products, view orders, and update inventory.
+This project will guide you through building  full-stack E-commerce website  using the MERN stack (MongoDB, Express, React, Node.js). It allows users to browse products, add them to the cart, and proceed to checkout. Admin users can manage products, view orders, and update inventory.
 
 ## Tech Stack
 
@@ -44,19 +45,19 @@ This project guides you through building a full-stack E-Commerce website using t
   - Input validation and data sanitization.
   - HTTPS support for secure data transmission.
 
----
 
-## Milestone 1: User Authentication Setup
 
-### Description:
-The user authentication setup focuses on allowing users to sign up and log in with their credentials. The backend will handle secure password storage using bcryptjs, while the frontend will manage user interactions. The user will be authenticated with JWT (JSON Web Tokens) for session management.
+# Milestone 1: 
 
----
+In a MERN stack application, login and sign-up (authentication) typically involve a process where users can register (sign-up) with their credentials, and later log in using those credentials. The login and sign-up process can be divided into several steps, with separate client-side (React) and server-side (Node.js/Express) handling.
 
+
+
+# Milestone 2:
 ## Milestone 2: Login Page & Authentication Setup
 
-### Description:
-Milestone 2 focuses on creating and setting up the **Login Page** for the application, including basic UI elements like forms and fields for user authentication. This milestone also involves setting up Tailwind CSS for styling to ensure responsive and modern design practices.
+### Description
+Milestone 2 focuses on the creation and setup of the **Login Page** for the application, including basic UI elements like forms and fields for user authentication. This milestone also includes setting up Tailwind CSS for styling, ensuring responsive and modern design practices. 
 
 ### Key Features Completed:
 - **Login Page Design**: 
@@ -77,9 +78,9 @@ Milestone 2 focuses on creating and setting up the **Login Page** for the applic
 - **React**: JavaScript library for building the user interface.
 - **Tailwind CSS**: Utility-first CSS framework for styling.
 - **React Router**: For managing routing (if applicable).
-- **Axios**: To handle HTTP requests for user authentication (in future milestones).
+- **Axios**: To handle HTTP requests for user authentication (in future milestones)
 
----
+
 
 ## Milestone 3: Backend Setup
 
@@ -88,7 +89,7 @@ Milestone 2 focuses on creating and setting up the **Login Page** for the applic
 - Created a Node.js server with Express.
 - Connected the server to MongoDB using Mongoose.
 - Added error handling middleware for better debugging.
-
+- 
 
 ## Milestone 4 Overview
 
@@ -98,10 +99,11 @@ Milestone 2 focuses on creating and setting up the **Login Page** for the applic
 - Multer Integration: Multer was integrated to handle file uploads (e.g., profile images, documents, etc.). Multer handles multipart/form-data, which is used for uploading files in Node.js applications.
 
 
+
 ## Milestone 5: Sign-Up Page Implementation
 
-In this milestone, I have created a **Sign-Up page** with the following features:
-- A user-friendly form for entering **Name**, **Email**, **Password**, and **Confirm Password**.
+In this milestone, I have created a *Sign-Up page* with the following features:
+- A user-friendly form for entering *Name, **Email, **Password, and **Confirm Password*.
 - Form validation to ensure:
   - All fields are filled.
   - The email is valid.
@@ -112,6 +114,7 @@ Technologies used:
 - React
 - Tailwind CSS
 - React Router
+
 
 ## Milestone 6: Backend endpoint for the Signup page to store all user data securely
 
@@ -125,6 +128,7 @@ Technologies Used:
 - MongoDB & Mongoose (Database & ORM)
 - bcrypt.js (Password encryption)
 - jsonwebtoken (JWT) (Authentication)
+
 
 ## Milestone 7: Backend endpoint for the Login page to store all user data securely and Implementation
 
@@ -171,28 +175,52 @@ In this milestone, we focused on sending and receiving product data between the 
 - Receive data on the frontend
 - Dynamically display product data
 
-# Milestone 12: My Products Page
 
-## Overview
-In this milestone, we created a "My Products" page that displays all the products added by the user, filtered by their email.
+## Milestone 12: My Products Page
+- In this milestone, we created a "My Products" page that displays all the products added by the user, filtered by their email.
 
-## Features
-- **Backend**: Added an endpoint to fetch products by user email.
-- **Frontend**: Created a function to retrieve and display products dynamically.
-- **Component**: Utilized the `Card` component to present each product.
+- Added an endpoint to fetch products by user email.
+- Created a function to retrieve and display products dynamically.
+- Utilized the Card component to present each product.
 
-Got it! Here’s a simplified version of the README file without code:
 
----
+## Milestone 13: Edit Product Functionality
+In this milestone, we created endpoint for editing/Updating a Product using existing data in frontend.
 
-# Milestone 13: Edit Product Functionality
-
-## Learning Goals
-- Write an endpoint to update existing data in MongoDB.
+- Writen an endpoint to update existing data in MongoDB.
 - Autofill forms with previous data for editing.
 
-# Milestone 14: Delete Product Functionality
+## Milestone 14: 
+Delete Product from Database in Frontend
+In this milestone, we created endpoint for deleting a product using existing data in frontend card component
 
-## Learning Goals
-- Write an endpoint to update existing data in MongoDB.
-- Deletes the product from the page
+- Written an endpoint to delete request existing data frm frontend to MongoDB
+
+## Milestone 15: Navbar Component for Every Screen Page in Frontend
+In this milestone, we created an Navbar Component for every screen with page like Home, My Products, Add product, cart,etc.,
+
+- Added Navbar for all pages includes HomePage, Products page, login/Signup page, and Product form
+- Made full responsive for both desktop and mobile view and styled using tailwind CSS
+
+## Milestone 16: Product Info Page
+In this milestone, we created a product information page that displays detailed product data and includes features like quantity selection, add-to-cart, buy-now, and a like button.
+
+- Implemented a product info page that fetches and displays detailed product information based on the product ID from the URL.
+- Applied a professional dark blue theme using Tailwind CSS.
+- Implemented event handlers for quantity changes, add-to-cart, buy-now, and like actions.
+
+## Milestone 17: Created an Endpoint for Saving Cart products in Database
+
+-In this milestone, we created an endpoint for saving the Cart Product Details in User Schema and Store Cart details in MongoDB Database.
+
+-Implemented POST Method to handle endpoint to store cart products in Database.
+
+## Milestone 18:
+
+-In this milestone, we created an endpoint for fetching all the products inside a user's cart from the MongoDB database based on the user's email. This allows the cart page to display the products that the user has added to their cart.
+
+-Implemented GET Method to handle the endpoint for fetching cart products from the database.
+
+-Validated User based on the email provided in the request and retrieved their cart items.
+
+-Displayed Cart Products with details such as quantity, price, product name, and image on the cart page.
